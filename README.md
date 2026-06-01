@@ -78,4 +78,4 @@ The automated check will flag any of these issues and block the merge until they
 
 | Name | GitHub |
 |------|--------|
-| (your name) | @yourhandle |
+| (LukasPW) | @LukasPW |
