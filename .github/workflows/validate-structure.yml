@@ -1,0 +1,19 @@
+name: Validate Project Structure
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check project has a README
+        run: |
+          for dir in projects/*/; do
+            if [ ! -f "$dir/README.md" ]; then
+              echo "ERROR: $dir is missing a README.md"
+              exit 1
+            fi
+          done
